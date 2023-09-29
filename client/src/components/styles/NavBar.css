@@ -1,0 +1,135 @@
+
+
+#navBar{
+    background-color: #1b004b;
+    display: flex;
+    height: 80px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.logOut{
+    width: auto;
+	  display: flex;
+	  flex-direction: column;
+    margin: auto;
+   /*  margin-left: auto; */
+}
+.buttonNav{
+    text-decoration: underline;
+    margin: 20px auto;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 22px;
+    font-size: 30px;
+	position: relative;
+	&::before{
+		transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		content: '';
+        border-radius: 9px;
+		width: 50%;
+		height: 100%;
+		background: rgba(30, 30, 30, 0.671)
+    ;
+		position: absolute;
+		top: 0;
+		left: 0;
+    }   
+
+    & .btn-text{
+		color: rgb(255, 255, 255);
+		mix-blend-mode: exclusion
+
+        ;
+	}
+	&:hover{
+		&::before{
+			background: rgba(30, 30, 30, 0.671);
+			width: 100%;
+		}
+    }
+}
+
+.inputNav{
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: auto;
+    margin-right: 5px;
+    outline: 0;
+    padding: 15px;
+    /* width: 100%; */
+    background-color: #2b2e44;
+    color: #64696d;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    transition: border 0.3s ease-in-out;
+}
+.inputNav:focus{
+    border: 3px solid rgb(0, 0, 0);
+}
+
+.buttonOnSearch{
+    margin: auto;
+    padding: 1rem;
+    text-transform: uppercase;
+    color: #fafafa;
+    background-color: green;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 1px 1px 10px rgba(50,50,50,.4);
+    transition: .3s all ease;
+    letter-spacing: .1rem;
+    font-size: .85rem;
+    position: relative;
+    top: 0;
+    right: 0;
+    padding-left: 2.5rem;
+    
+    &:after,
+    &:before {
+      position: absolute;
+      font-family: 'Barrio', sans-serif;
+      font-weight: bold;
+      font-size: 1rem;
+      color: darken(green, 20%);
+      transition: .3s all ease;
+    }
+    
+    &:before {
+      content: '_';
+      /* position: absolute */;
+      left: 1.4rem;
+      top: .9rem;
+    }
+    
+    &:after {
+      content: '>';
+      /* position: absolute; */
+      left: .8rem;
+      top: 1rem;
+    }
+    
+    &:hover {
+      box-shadow: 1px 1px 20px rgba(150,150,150,.2);
+      top: -.1rem;
+      right: -.1rem;
+      cursor: pointer;
+      
+      
+      &:before {
+        content: '_';
+        position: absolute;
+        left: .8rem;
+        top: .7rem;
+        transform: translateY(-2.51px);
+      }
+    
+      &:after {
+        content: '>';
+        position: absolute;
+        left: 1.1rem;
+        top: 1rem;
+      }
+    }
+}
